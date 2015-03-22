@@ -1,1 +1,48 @@
-Hello Shuff
+<!DOCTYPE html>
+<html ng-app="schwenzerSafety">
+<head>
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" />
+	<script src="angular.js"></script>
+	<script src="angular-route.js"></script>
+	<script>
+	angular.module("schwenzerSafety", ["ngRoute"])
+		.config(function($routeProvider, $locationProvider){
+
+			$routeProvider.when("/about",{
+				templateUrl: "/about.html"
+			});
+
+			$routeProvider.otherwise({
+				templateUrl: "/mainPage.html"
+			})
+		})
+		.controller("mainController", function($scope , $http){
+			$scope.shuff = "shuff!!!"
+		})
+	</script>
+</head>
+<body ng-controller="mainController">
+
+<div id="wrapper">
+  <div id="companyTitleWrapper">
+    <h1 id="companyTitleContent">Schwenzer<span> Safety Services</h1>
+  </div>
+ <div ng-view></div>
+  <div id="navContainer">
+    <ul id="navList">
+      <a href="/#"><li class="navBar">Home</li></a>
+      <a href="/#/about"><li class="navBar">Services</li></a>
+      <a href="/#about"><li class="navBar">Workplace Safety</li></a>
+      <a href="/#about"><li class="navBar">Food Safety</li></a>
+      <a href="/#about"><li class="navBar">About Us</li></a>
+    </ul>
+  </div>
+
+<ng-view></ng-view>
+
+<div id="footer">
+  <span>Copyright 2014 All Rights Reserved</span>
+</div>
+</body>
+</html>

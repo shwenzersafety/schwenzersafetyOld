@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- <link href="style.css" rel="stylesheet" /> -->
+	<link rel="stylesheet" href="custom.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -27,25 +28,32 @@
 </head>
 <body ng-controller="mainController">
 
-<div id="wrapper">
-  <div id="companyTitleWrapper">
-    <h1 id="companyTitleContent">Schwenzer<span> Safety Services</h1>
-  </div>
- <div ng-view></div>
-  <div id="navContainer">
-    <ul id="navList">
-      <a href="/#"><li class="navBar">Home</li></a>
-      <a href="/#/about"><li class="navBar">Services</li></a>
-      <a href="/#about"><li class="navBar">Workplace Safety</li></a>
-      <a href="/#about"><li class="navBar">Food Safety</li></a>
-      <a href="/#about"><li class="navBar">About Us</li></a>
-    </ul>
-  </div>
+<div class="container-fluid">
 
+	<header class="masthead">
+		<h1>Schwenzer <small>Safety Services</small></h1>
+	</header>
+
+		<div class="container">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div>
+						<ul class="nav navbar-nav">
+							<li><a href="#">Home</a></li>
+							<li><a href="/#/about">About</a></li>
+							<li><a href="/#/about">Services</a></li>
+							<li><a href="/#/about">Workplace Safety</a></li>
+							<li><a href="/#/about">Food Safety</a></li>
+						</ul>
+					</div>
+				<div>
+			</nav>
+		</div>
+
+<div class="col-sm-8 jumbotron">
 <ng-view></ng-view>
-
-<div id="footer">
-  <span>Copyright 2014 All Rights Reserved</span>
 </div>
+
+
 </body>
 </html>

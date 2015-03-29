@@ -13,9 +13,21 @@
 	angular.module("schwenzerSafety", ["ngRoute"])
 	.config(function($routeProvider, $locationProvider){
 
+		$routeProvider.when("/services",{
+			templateUrl: "/servicesPage.html"
+		});
+
 		$routeProvider.when("/about",{
 			templateUrl: "/about.html"
 		});
+
+		$routeProvider.when("/workplace-safety", {
+			templateUrl: "/workplace-safety.html"
+		});
+
+		$routeProvider.when("/foodplace-safety", {
+			templateUrl: "/foodplace-safety.html"
+		})
 
 		$routeProvider.otherwise({
 			templateUrl: "/mainPage.html"
@@ -34,19 +46,21 @@
 					<div>
 						<ul class="nav navbar-nav " >
 							<li><a href="#">Home</a></li>
+							<li><a href="/#/services">Services</a></li>
+							<li><a href="/#/workplace-safety">Workplace Safety</a></li>
+							<li><a href="/#/foodplace-safety">Food Safety</a></li>
 							<li><a href="/#/about">About</a></li>
-							<li><a href="/#/about">Services</a></li>
-							<li><a href="/#/about">Workplace Safety</a></li>
-							<li><a href="/#/about">Food Safety</a></li>
 						</ul>
 					</div>
 					<div>
 					</nav>
 				</div>
 
-				<div class="container-fluid">
+				<div class="background-wrapper container-fluid">
 					<div class="headerContainer">
-						<h1 class="header">Schwenzer <small>Safety Services</small></h1>
+						<div id="header-background">
+							<h1 class="header">Schwenzer <small>Safety Services</small></h1>
+						</div>
 					</div>
 
 					<div class=" main-content col-md-8 panel panel-default jumbotron">

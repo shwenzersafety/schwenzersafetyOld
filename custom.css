@@ -92,11 +92,7 @@ body > div.container-full > nav {
 
 .navbar .navbar-nav {
   display: inline-block;
-  float: none;
+;
   vertical-align: top;
-    width: 100%;
-    text-align: center;
-      display: inline-block;
-  }
 
 }

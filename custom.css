@@ -80,3 +80,23 @@ body > div.container-full > nav {
 	/*border: 1em solid black;*/
 }
 
+.food-safety-regulatory {
+	text-align: center;
+}
+
+.contact {
+	min-width: 30em;
+	position: relative;
+	left: 1em;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+    width: 100%;
+    text-align: center;
+      display: inline-block;
+  }
+
+}

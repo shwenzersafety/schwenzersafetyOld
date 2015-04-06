@@ -100,3 +100,10 @@ body > div.container-full > nav {
 h2 {
 	text-align: center;
 }
+
+img#mouse-cheese {
+  display: block;
+  height: auto;
+  width: 40em;
+  margin: 0 auto;
+}
